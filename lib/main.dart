@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         ),
-        home: MyHomePage(),
+        home: SafeArea(child : MyHomePage()),
       ),
     );
   }
@@ -37,13 +37,14 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+
           Text('A random idea123:'),
           Text(appState.current.asLowerCase),
           Text('hello world!'),
           ElevatedButton(
             onPressed: () {
               print('button pressed!');
-            },
+            }, 
             child: Text('Next'),
           ),
         ],
